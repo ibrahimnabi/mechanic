@@ -9,6 +9,7 @@ const initialState = {
   customers: [],
   reviews: [],
   sessions: [],
+  balance: 0,
 };
 
 export default (state = initialState, { type, payload }) => {
@@ -29,6 +30,8 @@ export default (state = initialState, { type, payload }) => {
       return { ...state, sessions: payload };
     case ActionTypes.UPDATE_REVIEWS:
       return { ...state, reviews: payload };
+    case ActionTypes.UPDATE_BALANCE:
+      return { ...state, balance: payload };
     default:
       return state;
   }

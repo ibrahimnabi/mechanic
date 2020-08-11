@@ -207,6 +207,20 @@ const addProblemReport = async (uid, problem, desc) => {
       from: "Mechanic",
     });
 };
+const reportProblem = async (uid, problem, desc, customerId) => {
+  const key = (await app.database().ref("problems/").push()).key;
+  await app
+    .database()
+    .ref("reports/" + key)
+    .set({
+      problem,
+      uid,
+      desc,
+      key,
+      customerId,
+      from: "Mechanic",
+    });
+};
 const addFeedback = async (uid, desc, rating) => {
   const key = (await app.database().ref("feedbacks/").push()).key;
   await app
@@ -367,6 +381,7 @@ const Firebase = {
   forgetPassword,
   deleteService,
   addProblemReport,
+  reportProblem,
   addFeedback,
   addSupportMessage,
   sendMessageToCustomer,

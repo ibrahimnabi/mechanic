@@ -57,3 +57,10 @@ export const updateReviews = (reviews) => {
     payload: reviews,
   };
 };
+
+export const updateBalance = (balance) => {
+  return {
+    type: ActionTypes.UPDATE_BALANCE,
+    payload: balance,
+  };
+};

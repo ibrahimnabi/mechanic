@@ -47,6 +47,7 @@ import Blocked from "../Screens/Blocked";
 import LandingPage from "../Screens/LandingPage";
 import * as Location from "expo-location";
 import { mapObjectToArr } from "../Util/util";
+import ReportACustomer from "../Screens/ReportACustomer";
 
 class Navigation extends Component {
   componentDidMount = async () => {
@@ -186,6 +187,7 @@ class Navigation extends Component {
             <Scene key="sessionChat" component={SessionChat}></Scene>
             <Scene key="report" component={ReportProblem}></Scene>
             <Scene key="feedback" component={Feedback}></Scene>
+            <Scene key="reportCustomer" component={ReportACustomer}></Scene>
             <Scene key="sessions" component={Sessions}></Scene>
             <Scene key="editProfile" component={EditProfile}></Scene>
             <Scene key="unverified" component={Unverified}></Scene>

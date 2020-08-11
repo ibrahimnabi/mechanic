@@ -113,6 +113,7 @@ class DrawerComponent extends Component {
           <OpenSansBoldText style={{ marginTop: 10, fontSize: 16 }}>
             {this.props.mechanic && this.props.mechanic.name}
           </OpenSansBoldText>
+
           <View
             style={{
               marginTop: 10,
@@ -123,6 +124,18 @@ class DrawerComponent extends Component {
             <MaterialIcons name="stars" size={18} color="#E0AC24" />
             <OpenSansText style={{ fontSize: 13, marginLeft: 5 }}>
               {rating ? rating : "Unrated"}
+            </OpenSansText>
+          </View>
+          <View
+            style={{
+              marginTop: 10,
+              flexDirection: "row",
+              alignItems: "center",
+            }}
+          >
+            <OpenSansBoldText>Account Balance</OpenSansBoldText>
+            <OpenSansText style={{ fontSize: 13, marginLeft: 5 }}>
+              {this.props.balance}
             </OpenSansText>
           </View>
         </View>

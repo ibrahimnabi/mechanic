@@ -76,19 +76,6 @@ class CustomerMatched extends Component {
 
           <View
             style={{
-              marginTop: 10,
-              flexDirection: "row",
-              alignItems: "center",
-              alignSelf: "center",
-            }}
-          >
-            <MaterialIcons name="stars" size={18} color="#E0AC24" />
-            <OpenSansText style={{ fontSize: 13, marginLeft: 5 }}>
-              {false ? "5.0" : "Unrated"}
-            </OpenSansText>
-          </View>
-          <View
-            style={{
               width: "80%",
               alignSelf: "center",
               marginVertical: 30,

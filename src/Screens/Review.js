@@ -99,8 +99,25 @@ class Review extends Component {
             justifyContent: "center",
           }}
         >
-          <Text style={{ color: "white", fontSize: 16 }}>
-            Give review and Confirm payment
+          <Text style={{ color: "white", fontSize: 16 }}>Give review</Text>
+        </TouchableOpacity>
+        <TouchableOpacity
+          onPress={Actions.reportCustomer}
+          style={{
+            alignSelf: "center",
+            width: "90%",
+            padding: 20,
+            borderRadius: 40,
+            backgroundColor: "#fff",
+            marginTop: 40,
+            alignItems: "center",
+            justifyContent: "center",
+            borderColor: "#FF4A4A",
+            borderWidth: 1,
+          }}
+        >
+          <Text style={{ color: "#FF4A4A", fontSize: 16 }}>
+            Report Customer
           </Text>
         </TouchableOpacity>
       </View>

@@ -4,6 +4,7 @@ import NavbarWithLogo from "../Components/NavbarWithLogo";
 import { connect } from "react-redux";
 import Firebase from "../Firebase/Firebase";
 import { Actions } from "react-native-router-flux";
+import { updateBalance } from "../Redux/Actions/ActionCreator";
 class ConfirmPayment extends Component {
   state = {
     amountPayed: 0,
@@ -37,7 +38,7 @@ class ConfirmPayment extends Component {
       this.props.currentCustomer.uid,
       newCustomerBalance
     );
-
+    this.props.updateBalance(newMechanicBalance);
     Actions.review();
   };
   render() {
@@ -78,4 +79,4 @@ class ConfirmPayment extends Component {
   }
 }
 
-export default connect((state) => state)(ConfirmPayment);
+export default connect((state) => state, { updateBalance })(ConfirmPayment);
